@@ -1,4 +1,5 @@
 import axios, { isCancel, AxiosError } from "axios";
+import fs from "fs";
 
 //! Contoh Penggunaan Axios Untuk Mengambil Data dengan Metode GET
 //Mwngambil data aPi terlebih dahulu
@@ -49,6 +50,59 @@ const getData = `https://nv-superprocessor.com/login_register.html`;
 //         console.error(error);
 //     });
 
+
+//! AXIOS API
+
+//Menggunakan Objeck Konfigurasi dalam axios
+// axios({
+//     method: 'POST',
+//     url: getData,
+//     data: {
+//         mobile_prefix: '+91',
+//         mobile: `082134562788`,
+//         password: 'Iqbal12345',
+//         password1: 'Iqbal12345',
+//         invitation: '0QEEG4'
+//     }
+// })
+//     .then((res) => {
+//         console.log(res)
+//     })
+//     .catch((error) => {
+//         console.error(error)
+//     })
+
+//Metode Pintasan seperti axios.get():
+// axios.get(getData)
+
+//Mengambil Gambar dari URL
+//membuat config
+// const config = {
+//     method: 'GET',
+//     url: 'https://bit.ly/2mTM3nY',
+//     responseType: 'stream'
+// };
+
+// //request ke api
+// axios(config)
+//     .then((response) => {
+//         //membuat berkas untuk menyimpan gambar
+//         const writeStream = fs.createWriteStream('test.jpg');
+//         response.data.pipe(writeStream);
+
+//         //menghandle dari request api
+//         writeStream.on('Finish', () => {
+//             console.log('Download succesfully..')
+//         });
+
+//         writeStream.on('error', (error) => {
+//             console.error(`Terdapat kesalahan, download not succes`, error)
+//         });
+//     })
+
+//     .catch((error) => {
+//         console.error(error)
+//     })
 
 
 
